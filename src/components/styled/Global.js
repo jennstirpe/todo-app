@@ -8,6 +8,14 @@ const GlobalStyles = createGlobalStyle`
 
     body {
         font-family: 'Josefin Sans', sans-serif;
+        height: 100vh;
+        width: 100%;
+        border: 1px solid red;
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        background-color: ${({theme}) => theme.bgBody};
     }
 
 `
