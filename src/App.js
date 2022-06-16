@@ -6,7 +6,9 @@ import { lightTheme, darkTheme } from './themes.js';
 import GlobalStyles from "./components/styled/Global";
 import Banner from './components/Banner.js';
 import Header from './components/Header';
-import TodoList from './components/TodoList';
+import TodoInput from './components/TodoInput.js';
+import TodoList from './components/TodoList.js';
+
 
 const LOCAL_STORAGE_KEY = 'todoApp.todos'
 
@@ -37,7 +39,6 @@ function App() {
 
   // ADD TODO
   function handleAddTodo() {
-    console.log()
     const todoName = newTodoInput.current.value;
     if (todoName === "") {
       return;
@@ -74,7 +75,7 @@ function App() {
   // CHANGE LIST DISPLAYED BASED ON FILTER
   useEffect(() => {
     filterList();
-  }, [filter])
+  }, [todos, filter])
 
   function filterList() {
     if (filter === 'all') {
@@ -88,7 +89,6 @@ function App() {
     }
   }
 
-
   // TOGGLE THEME COLORS
   function changeToDarkTheme() {
     setColorTheme('dark')
@@ -100,19 +100,13 @@ function App() {
 
   return (
     <ThemeProvider theme={colorTheme === 'light' ? lightTheme : darkTheme} >
-      <>
+      <main>
       <GlobalStyles />
       
       <Banner />
       <Header changeToDarkTheme={changeToDarkTheme} changeToLightTheme={changeToLightTheme} />
 
-
-
-      <main>
-        <div>
-          <input ref={newTodoInput} type="text" placeholder="Create a new todo..." />
-          <button onClick={handleAddTodo}>+</button>
-        </div>
+      <TodoInput newTodoInput={newTodoInput} handleAddTodo={handleAddTodo} />
 
 
         <section>
@@ -132,12 +126,11 @@ function App() {
             </div>
           </div>
         </section>
-      </main>
 
       <footer>
         <p>Drag and drop to reorder list</p>
       </footer>
-      </>
+      </main>
     </ThemeProvider>
   );
 }
