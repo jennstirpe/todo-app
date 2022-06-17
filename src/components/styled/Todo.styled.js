@@ -14,7 +14,7 @@ export const StyledTodo = styled.div`
    color: ${({theme}) => theme.todosText};
    
 
-   &:first-of-type {
+   &:first-of-type() {
        border-top-left-radius: .4rem;
        border-top-right-radius: .4rem;
    }

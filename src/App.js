@@ -8,9 +8,10 @@ import Banner from './components/Banner.js';
 import Header from './components/Header';
 import TodoInput from './components/TodoInput.js';
 import TodoList from './components/TodoList.js';
+import TodoFilters from './components/TodoFilters.js';
 
 
-const LOCAL_STORAGE_KEY = 'todoApp.todos'
+const LOCAL_STORAGE_KEY = 'todoApp.todos';
 
 
 function App() {
@@ -114,24 +115,13 @@ function App() {
 
       <TodoInput newTodoInput={newTodoInput} handleAddTodo={handleAddTodo} />
 
+      <TodoList todos={filteredTodos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
 
-        <section>
-          <TodoList todos={filteredTodos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
-
-          <div>
-            <div className="remaining">
-              <p>{countRemaining()}</p>
-            </div>
-            <div className="filters">
-              <button onClick={() => setFilter('all')}>All</button>
-              <button onClick={() => setFilter('active')}>Active</button>
-              <button onClick={() => setFilter('completed')}>Completed</button>
-            </div>
-            <div className="clear">
-              <button onClick={handleClear}>Clear Completed</button>
-            </div>
-          </div>
-        </section>
+      <TodoFilters 
+        countRemaining={countRemaining} 
+        setFilter={setFilter}
+        handleClear={handleClear}
+      />
 
       <footer>
         <p>Drag and drop to reorder list</p>
