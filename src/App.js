@@ -61,6 +61,12 @@ function App() {
     setTodos(remainingTodos);
   }
 
+  // CLEAR TODO WHEN X CLICKED
+  function deleteTodo(id) {
+    const remainingTodos = todos.filter(todo => todo.id !== id);
+    setTodos(remainingTodos);
+  }
+
   // COUNT ANY UNCOMPLETED TODOS
   function countRemaining() {
     const count = todos.filter(todo => !todo.complete);
@@ -110,7 +116,7 @@ function App() {
 
 
         <section>
-          <TodoList todos={filteredTodos} toggleTodo={toggleTodo} />
+          <TodoList todos={filteredTodos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
 
           <div>
             <div className="remaining">

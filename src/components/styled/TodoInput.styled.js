@@ -5,14 +5,14 @@ export const StyledTodoInput = styled.div`
     position: relative;
     margin-bottom: 1rem;
 
-    .todoInput, .todoSubmit {
+    .todo-input, .todo-submit {
         height: 3.25rem;
         border: none;
         background-color: ${({theme})=> theme.bgTodos};
         color: ${({theme})=> theme.todosText};
     }
 
-    .todoInput {
+    .todo-input {
         width: 100%;
         padding-left: 3rem;
         position: relative;
@@ -20,7 +20,7 @@ export const StyledTodoInput = styled.div`
         border-radius: .4rem;
     }
 
-    .todoSubmit {
+    .todo-submit {
         position: absolute;
         right: 0;
         width: 2.75rem;
