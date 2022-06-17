@@ -4,15 +4,16 @@ import { v4 as uuidv4 } from 'uuid';
 
 import { lightTheme, darkTheme } from './themes.js';
 import GlobalStyles from "./components/styled/Global";
+import { StyledMain } from './components/styled/Main.styled.js';
 import Banner from './components/Banner.js';
 import Header from './components/Header';
 import TodoInput from './components/TodoInput.js';
 import TodoList from './components/TodoList.js';
 import TodoFilters from './components/TodoFilters.js';
+import { StyledFooter } from './components/styled/Footer.styled.js';
 
 
 const LOCAL_STORAGE_KEY = 'todoApp.todos';
-
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -107,7 +108,7 @@ function App() {
 
   return (
     <ThemeProvider theme={colorTheme === 'light' ? lightTheme : darkTheme} >
-      <main>
+      <StyledMain>
       <GlobalStyles />
       
       <Banner />
@@ -123,10 +124,11 @@ function App() {
         handleClear={handleClear}
       />
 
-      <footer>
+      <StyledFooter>
         <p>Drag and drop to reorder list</p>
-      </footer>
-      </main>
+      </StyledFooter>
+
+      </StyledMain>
     </ThemeProvider>
   );
 }

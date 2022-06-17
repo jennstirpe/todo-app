@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const StyledHeader = styled.header`
-    width: 22rem;
     height: 6rem;
     display: flex;
     justify-content: space-between;
@@ -14,4 +13,7 @@ export const StyledHeader = styled.header`
         font-weight: 700;
     }
     
+    @media (min-width: 1440px) {
+        margin-top: 1rem;
+    }
 `

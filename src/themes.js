@@ -14,6 +14,7 @@ export const lightTheme = {
     hoverText: 'rgb(72, 75, 106)',
     bannerMobile: bannerMobileLight,
     bannerDesktop: bannerDesktopLight,
+    boxShadow: 'rgb(207, 207, 207, 0.5)',
 }
 
 export const darkTheme = {
@@ -26,5 +27,6 @@ export const darkTheme = {
     hoverText: 'rgb(228, 229, 241)',
     bannerMobile: bannerMobileDark,
     bannerDesktop: bannerDesktopDark,
+    boxShadow: 'rgb(0, 0, 0, 0)',
 }
 

@@ -2,7 +2,6 @@ import styled from "styled-components";
 import checkIcon from "./../../images/icon-check.svg";
 
 export const StyledTodo = styled.div`
-   width: 22rem;
    min-height: 3.75rem;
    padding: 0 1rem;
    background-color: ${({theme}) => theme.bgTodos};
@@ -12,6 +11,7 @@ export const StyledTodo = styled.div`
    align-items: center;
    position: relative;
    color: ${({theme}) => theme.todosText};
+   box-shadow: 0 1rem 1.25rem ${({theme}) => theme.boxShadow};
    
 
    &:first-of-type() {
@@ -66,5 +66,15 @@ export const StyledTodo = styled.div`
        background: none;
        border: none;
    }
+
+   @media (min-width: 1440px) {
+        .todo-name {
+            font-size: 1rem;
+        }
+
+        .todo-delete {
+            display: none;
+        }
+    }
 
 `

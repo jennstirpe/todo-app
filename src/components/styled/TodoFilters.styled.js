@@ -11,6 +11,7 @@ export const StyledFilters = styled.section`
     justify-content: space-between;
     align-items: center;
     font-size: .83rem;
+    box-shadow: 0 1rem 1.25rem ${({theme}) => theme.boxShadow};
 
     .remaining {
         color: ${({theme}) => theme.mainText};
@@ -18,7 +19,7 @@ export const StyledFilters = styled.section`
 
     .filters {
         height: 3.75rem;
-        width: 22rem;
+        width: 100%;
         position: absolute;
         left: 0;
         bottom: -5rem;
@@ -27,17 +28,34 @@ export const StyledFilters = styled.section`
         border-radius: .4rem;
         padding: 0 4.75rem;
         background: ${({theme}) => theme.bgTodos};
-        
-    }
 
-    .filter {
+        .filter {
         font-size: .9rem;
         font-weight: 700;
+        }  
     }
 
     .filter, .clear {
         background: none;
         border: none;
         color: ${({theme}) => theme.mainText};
+    }
+
+
+    @media (min-width: 1440px) {
+        height: 3rem;
+        justify-content: space-between;
+
+        .filters {
+            position: relative;
+            bottom: 0;
+            height: 100%;
+            width: 10rem;
+            padding: 0;
+
+            .filter {
+                font-size: .83rem;
+            }
+        }
     }
 `

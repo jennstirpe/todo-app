@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const StyledTodoInput = styled.div`
-    width: 22rem;
     position: relative;
     margin-bottom: 1rem;
 
@@ -28,4 +27,11 @@ export const StyledTodoInput = styled.div`
         border-top-right-radius: .4rem;
         border-bottom-right-radius: .4rem;
     }
+
+    @media (min-width: 1440px) {
+        .todo-input {
+            font-size: 1rem;
+        }
+    }
+
 `
