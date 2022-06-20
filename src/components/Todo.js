@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyledTodo } from './styled/Todo.styled';
 
-export default function Todo({ todo, toggleTodo, deleteTodo }) {
+export default function Todo({ todo, toggleTodo, deleteTodo, classNames }) {
     function handleToggle() {
         toggleTodo(todo.id);
     }
@@ -10,9 +10,13 @@ export default function Todo({ todo, toggleTodo, deleteTodo }) {
       deleteTodo(todo.id);
     }
 
+    const labelClasses = classNames('todo-name', {
+      'complete-todo': todo.complete === true
+    })
+
   return (
     <StyledTodo>
-        <label className="todo-name">
+        <label className={labelClasses}>
             <input className="todo-checkbox" type="checkbox" checked={todo.complete} onChange={handleToggle} />
             <span className="custom-checkbox"></span>
             {todo.todoName}

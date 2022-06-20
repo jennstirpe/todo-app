@@ -12,12 +12,10 @@ export const StyledTodo = styled.div`
    position: relative;
    color: ${({theme}) => theme.todosText};
    box-shadow: 0 1rem 1.25rem ${({theme}) => theme.boxShadow};
-   
 
-   &:first-of-type() {
-       border-top-left-radius: .4rem;
-       border-top-right-radius: .4rem;
-   }
+   &:hover, .todo-name:hover, .custom-checkbox:hover, input:hover, .todo-delete:hover {
+        cursor: pointer;
+    }
 
    .todo-name {
        overflow-wrap: anywhere;
@@ -31,6 +29,16 @@ export const StyledTodo = styled.div`
        width: 80%;
        position: relative;
        left: -2.5rem;
+       transition: color 150ms linear;
+
+       &:hover {
+        color: ${({theme}) => theme.mainText};
+       }
+   }
+
+   .complete-todo {
+    text-decoration: line-through;
+    color: ${({theme}) => theme.complete};
    }
 
    .todo-checkbox {
@@ -59,21 +67,31 @@ export const StyledTodo = styled.div`
        border: 1px solid ${({theme}) => theme.complete};
        border-radius: 50%;
        margin-right: .75rem;
+       transition: border 150ms linear;
+
+       &:hover {
+           border: 2px solid ${({theme}) => theme.complete};
+       }
    }
 
    .todo-delete {
-       color: ${({theme}) => theme.complete};
        background: none;
        border: none;
+       transition: color 150ms linear;
    }
 
    @media (min-width: 1440px) {
+    
+        &:hover > .todo-delete {
+            visibility: visible;
+        }   
+
         .todo-name {
             font-size: 1rem;
         }
 
         .todo-delete {
-            display: none;
+            visibility: hidden;
         }
     }
 

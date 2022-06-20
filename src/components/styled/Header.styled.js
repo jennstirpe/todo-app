@@ -12,6 +12,12 @@ export const StyledHeader = styled.header`
         letter-spacing: 10px;
         font-weight: 700;
     }
+
+    .toggle-icon {
+        background: none;
+        border: none;
+    }
+    
     
     @media (min-width: 1440px) {
         margin-top: 1rem;

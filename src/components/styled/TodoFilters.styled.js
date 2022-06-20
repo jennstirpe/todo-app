@@ -28,19 +28,34 @@ export const StyledFilters = styled.section`
         border-radius: .4rem;
         padding: 0 4.75rem;
         background: ${({theme}) => theme.bgTodos};
+        box-shadow: 0 1rem 1.25rem ${({theme}) => theme.boxShadow};
 
         .filter {
-        font-size: .9rem;
-        font-weight: 700;
+            font-size: .9rem;
+            font-weight: 700;
+            
+            &:hover {
+                cursor: pointer;
+                color: ${({theme}) => theme.todosText};
+            }
         }  
+
+        .active {
+            color: rgb(58, 123, 253);
+        }
     }
 
     .filter, .clear {
         background: none;
         border: none;
         color: ${({theme}) => theme.mainText};
+        transition: all 150ms linear;
     }
 
+    .clear:hover {
+        cursor: pointer;
+        color: rgb(168, 0, 0);
+    }
 
     @media (min-width: 1440px) {
         height: 3rem;
