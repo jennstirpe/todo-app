@@ -40,7 +40,7 @@ export const StyledFilters = styled.section`
             }
         }  
 
-        .active {
+        .active-filter {
             color: rgb(58, 123, 253);
         }
     }
