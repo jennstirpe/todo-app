@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import { lightTheme, darkTheme } from './themes.js';
 import GlobalStyles from "./components/styled/Global";
 import { StyledMain } from './components/styled/Main.styled.js';
-import Banner from './components/Banner.js';
+import { StyledBanner } from './components/styled/Banner.styled.js';
 import Header from './components/Header';
 import TodoInput from './components/TodoInput.js';
 import TodoList from './components/TodoList.js';
@@ -133,7 +133,7 @@ function App() {
       <StyledMain>
       <GlobalStyles />
         
-      <Banner />
+      <StyledBanner />
       <Header toggleTheme={toggleTheme} />
 
       <TodoInput newTodoInput={newTodoInput} handleAddTodo={handleAddTodo} />

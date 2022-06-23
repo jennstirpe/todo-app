@@ -18,7 +18,6 @@ export const StyledTodo = styled.div`
     }
 
     &:first-of-type {
-        /* background-color: black; */
         border-top-left-radius: .4rem;
         border-top-right-radius: .4rem;
     }

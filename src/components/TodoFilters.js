@@ -1,9 +1,7 @@
-import { useRef } from 'react'
 import { StyledFilters } from './styled/TodoFilters.styled'
 
 
 export default function TodoFilters({ countRemaining, setFilter, handleClear, allFilterActive, activeFilterActive, completedFilterActive }) {
-    
 
     function handleFilterAll() {
       setFilter('all');
