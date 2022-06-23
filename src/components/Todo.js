@@ -1,8 +1,9 @@
 import React from 'react'
 import { StyledTodo } from './styled/Todo.styled';
 
-export default function Todo({ todo, toggleTodo, deleteTodo, classNames, todos }) {
-    function handleToggle() {
+export default function Todo({ todo, toggleTodo, deleteTodo, classNames }) {
+  
+  function handleToggle() {
         toggleTodo(todo.id);
     }
 

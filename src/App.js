@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
@@ -11,6 +11,9 @@ import Header from './components/Header';
 import TodoInput from './components/TodoInput.js';
 import TodoList from './components/TodoList.js';
 import TodoFilters from './components/TodoFilters.js';
+
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 
 const LOCAL_STORAGE_KEY = 'todoApp.todos';
 
@@ -123,11 +126,13 @@ function App() {
     }
   }
 
+
+
   return (
     <ThemeProvider theme={colorTheme === 'light' ? lightTheme : darkTheme} >
       <StyledMain>
       <GlobalStyles />
-      
+        
       <Banner />
       <Header toggleTheme={toggleTheme} />
 
@@ -144,7 +149,7 @@ function App() {
         completedFilterActive={completedFilterActive}
       />
 
-      </StyledMain>
+    </StyledMain>
     </ThemeProvider>
   );
 }

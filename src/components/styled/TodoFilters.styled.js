@@ -60,6 +60,7 @@ export const StyledFilters = styled.section`
     @media (min-width: 1440px) {
         height: 3rem;
         justify-content: space-between;
+        
 
         .filters {
             position: relative;
@@ -67,6 +68,7 @@ export const StyledFilters = styled.section`
             height: 100%;
             width: 10rem;
             padding: 0;
+            box-shadow: none;
 
             .filter {
                 font-size: .83rem;
