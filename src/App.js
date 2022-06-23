@@ -123,8 +123,6 @@ function App() {
     }
   }
 
-
-
   return (
     <ThemeProvider theme={colorTheme === 'light' ? lightTheme : darkTheme} >
       <StyledMain>

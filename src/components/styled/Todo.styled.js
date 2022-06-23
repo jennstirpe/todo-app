@@ -17,6 +17,13 @@ export const StyledTodo = styled.div`
         cursor: pointer;
     }
 
+    &:first-of-type {
+        /* background-color: black; */
+        border-top-left-radius: .4rem;
+        border-top-right-radius: .4rem;
+    }
+
+
    .todo-name {
        overflow-wrap: anywhere;
        padding: .25rem;

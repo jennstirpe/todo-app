@@ -12,11 +12,12 @@ export const StyledTodoInput = styled.div`
     }
 
     .todo-input {
-        width: 100%;
+        width: 19.25rem;
         padding-left: 3rem;
         position: relative;
         font-family: 'Josefin Sans', sans-serif;
-        border-radius: .4rem;
+        border-top-left-radius: .4rem;
+        border-bottom-left-radius: .4rem;
     }
 
     .todo-submit {
@@ -31,6 +32,7 @@ export const StyledTodoInput = styled.div`
     @media (min-width: 1440px) {
         .todo-input {
             font-size: 1rem;
+            width: 27.25rem;
         }
     }
 

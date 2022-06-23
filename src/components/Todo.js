@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyledTodo } from './styled/Todo.styled';
 
-export default function Todo({ todo, toggleTodo, deleteTodo, classNames }) {
+export default function Todo({ todo, toggleTodo, deleteTodo, classNames, todos }) {
     function handleToggle() {
         toggleTodo(todo.id);
     }
@@ -13,6 +13,8 @@ export default function Todo({ todo, toggleTodo, deleteTodo, classNames }) {
     const labelClasses = classNames('todo-name', {
       'complete-todo': todo.complete === true
     })
+
+    
 
   return (
     <StyledTodo>
