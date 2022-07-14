@@ -12,9 +12,6 @@ import TodoInput from './components/TodoInput.js';
 import TodoList from './components/TodoList.js';
 import TodoFilters from './components/TodoFilters.js';
 
-import { DndProvider } from 'react-dnd';
-import { HTML5Backend } from 'react-dnd-html5-backend';
-
 const LOCAL_STORAGE_KEY = 'todoApp.todos';
 
 function App() {
