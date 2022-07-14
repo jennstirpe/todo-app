@@ -17,7 +17,7 @@ React
 
 Jennifer S. - stirpe.jennifer@gmail.com
 
-[Project link:](https://jennstirpe.github.io/todo-app/)
+[Project link](https://jennstirpe.github.io/todo-app/)
 
 ## Acknowledgements
 
