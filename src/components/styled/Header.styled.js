@@ -16,6 +16,11 @@ export const StyledHeader = styled.header`
     .toggle-icon {
         background: none;
         border: none;
+
+        &:hover {
+            cursor: pointer;
+            opacity: .75;
+        }
     }
     
     

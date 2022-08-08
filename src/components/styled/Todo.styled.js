@@ -52,7 +52,7 @@ export const StyledTodo = styled.div`
        position: absolute;
 
        &:checked + .custom-checkbox {
-        background: url(${checkIcon}), linear-gradient(120deg, #57ddff, #c058f3);
+        background: url(${checkIcon}), linear-gradient(120deg, #caf0f8, #023e8a);
         background-repeat: no-repeat;
         background-position: center;
 

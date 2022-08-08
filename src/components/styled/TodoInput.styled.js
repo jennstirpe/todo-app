@@ -18,6 +18,11 @@ export const StyledTodoInput = styled.div`
         font-family: 'Josefin Sans', sans-serif;
         border-top-left-radius: .4rem;
         border-bottom-left-radius: .4rem;
+
+        &:focus {
+            outline: none;
+            border: 
+        }
     }
 
     .todo-submit {
@@ -27,6 +32,10 @@ export const StyledTodoInput = styled.div`
         font-size: 1.25rem;
         border-top-right-radius: .4rem;
         border-bottom-right-radius: .4rem;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     @media (min-width: 1440px) {

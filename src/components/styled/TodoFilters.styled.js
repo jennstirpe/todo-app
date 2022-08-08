@@ -36,12 +36,13 @@ export const StyledFilters = styled.section`
             
             &:hover {
                 cursor: pointer;
-                color: ${({theme}) => theme.todosText};
+                /* color: ${({theme}) => theme.todosText}; */
+                color: #caf0f8;
             }
         }  
 
         .active-filter {
-            color: rgb(58, 123, 253);
+            color: #48cae4;
         }
     }
 
