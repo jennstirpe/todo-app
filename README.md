@@ -18,7 +18,3 @@ React
 Jennifer S. - stirpe.jennifer@gmail.com
 
 [Project link](https://jennstirpe.github.io/todo-app/)
-
-## Acknowledgements
-
-Design by: [Frontend Mentor](https://www.frontendmentor.io/)
