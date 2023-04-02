@@ -83,7 +83,6 @@ export const StyledTodo = styled.div`
    .todo-delete {
        background: none;
        border: none;
-       transition: color 150ms linear;
    }
 
    @media (min-width: 1440px) {

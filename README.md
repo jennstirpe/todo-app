@@ -13,6 +13,9 @@ sun/moon in the upper right corner.
 
 React
 
+### Recent Updates
+Improved Accessibility
+
 ## Contact
 
 Jennifer S. - stirpe.jennifer@gmail.com

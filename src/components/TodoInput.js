@@ -4,7 +4,7 @@ export default function TodoInput({ newTodoInput, handleAddTodo }) {
   return (
     <StyledTodoInput>
         <input className="todo-input" ref={newTodoInput} type="text" placeholder="Create a new todo..." />
-        <button className="todo-submit" onClick={handleAddTodo}>+</button>
+        <button className="todo-submit" onClick={handleAddTodo} aria-label="Add new task">+</button>
     </StyledTodoInput>
   )
 }
