@@ -15,6 +15,7 @@ React
 
 ### Recent Updates
 Improved Accessibility
+Fixed bug
 
 ## Contact
 
